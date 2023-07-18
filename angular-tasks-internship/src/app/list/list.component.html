@@ -1,0 +1,6 @@
+<button (click)="toggleList()"> {{label}}</button>
+
+<ol *ngIf="isDisplayed">
+    <li *ngFor="let item of names" [ngClass]="{'valentina': item=='Valentina'}"> {{item}}
+    </li>
+</ol>
