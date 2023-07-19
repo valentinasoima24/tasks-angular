@@ -16,11 +16,9 @@ export class SecondListComponentComponent implements OnInit {
   tasks: Task[] = [{ id: 1, text: 'buy milk' }, { id: 2, text: 'shopping' }, { id: 3, text: 'go to gym' }];
 
   public recieveItem(id: number) {
-    for (let i = 0; i < this.tasks.length; i++) {
-      if (this.tasks[i].id == id) {
-        this.tasks.splice(i, 1);
-      }
+    const index = this.tasks.findIndex(task => task.id === id);
+    if (index !== -1) {
+      this.tasks.splice(index, 1);
     }
   }
 }
-

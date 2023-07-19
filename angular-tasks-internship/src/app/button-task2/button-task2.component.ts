@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ButtonTask2Component implements OnInit {
 
-  constructor() { }
-
   ngOnInit(): void {
   }
 
   count = 0;
+
+  constructor() { }
 }

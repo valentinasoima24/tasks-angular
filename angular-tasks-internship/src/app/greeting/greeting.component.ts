@@ -7,8 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GreetingComponent implements OnInit {
 
-  constructor() { }
-
   ngOnInit(): void {
   }
   public inputValue: string = "";
@@ -17,4 +15,6 @@ export class GreetingComponent implements OnInit {
   enableInput() {
     this.isDisabled = false;
   }
+
+  constructor() { }
 }

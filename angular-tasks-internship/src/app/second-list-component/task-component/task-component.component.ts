@@ -8,20 +8,18 @@ import { Task } from '../Task';
 })
 export class TaskComponentComponent implements OnInit {
 
-  constructor() {
-
-  }
+  @Input() text!: Task;
+  @Output() item = new EventEmitter<number>();
 
   ngOnInit(): void {
   }
 
   name = "Delete";
-  @Input() text!: Task;
-  @Output() item = new EventEmitter<number>();
-
-  public removeItem() {
+  public handleClickDelete() {
     this.item.emit(this.text.id);
   }
+
+  constructor() { }
 }
 
 
