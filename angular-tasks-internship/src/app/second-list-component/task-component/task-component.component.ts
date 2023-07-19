@@ -11,15 +11,18 @@ export class TaskComponentComponent implements OnInit {
   @Input() text!: Task;
   @Output() item = new EventEmitter<number>();
 
+  name = "Delete";
+
+  constructor() { }
+
   ngOnInit(): void {
   }
 
-  name = "Delete";
   public handleClickDelete() {
     this.item.emit(this.text.id);
   }
 
-  constructor() { }
+
 }
 
 

@@ -8,12 +8,12 @@ import { Task } from './Task';
 })
 export class SecondListComponentComponent implements OnInit {
 
+  tasks: Task[] = [{ id: 1, text: 'buy milk' }, { id: 2, text: 'shopping' }, { id: 3, text: 'go to gym' }];
+
   constructor() { }
 
   ngOnInit(): void {
   }
-
-  tasks: Task[] = [{ id: 1, text: 'buy milk' }, { id: 2, text: 'shopping' }, { id: 3, text: 'go to gym' }];
 
   public recieveItem(id: number) {
     const index = this.tasks.findIndex(task => task.id === id);

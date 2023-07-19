@@ -6,11 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./button-task2.component.css']
 })
 export class ButtonTask2Component implements OnInit {
-
-  ngOnInit(): void {
-  }
-
   count = 0;
 
   constructor() { }
+
+  ngOnInit(): void {
+  }
 }

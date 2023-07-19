@@ -7,14 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GreetingComponent implements OnInit {
 
-  ngOnInit(): void {
-  }
   public inputValue: string = "";
   public isDisabled: boolean = true;
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
 
   enableInput() {
     this.isDisabled = false;
   }
-
-  constructor() { }
 }
